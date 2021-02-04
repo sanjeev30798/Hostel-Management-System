@@ -46,6 +46,51 @@
 {
   color:#007b5e;
 }
+.flip-card {
+  background-color: transparent;
+  width: 260px;
+  height: 300px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  max-width: 260px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  padding-bottom: : 2px;
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-right: 1px;
+}
+
+.flip-card-back {
+  background-color: #CCD1D1;
+  color: #007b5e;
+  transform: rotateY(180deg);
+  padding: 3px;
+}
+</style>
 </style>
 <body style="background-color: #CCD1D1">
 
@@ -89,25 +134,56 @@
 <br>
 <div class="row">
 <div class="col-sm-2"></div>
-<div class="col-sm-3 ">
-<div class="card">
-  <img src="http://iiitg.ac.in/faculty/rakesh/pp.png" alt="Rakesh Matam" style="width:100%">
-  <h2 class="name">Dr. Rakesh Matam</h2>
-  <p class="title">CHIEF WARDEN</p>
+<div class="col-sm-3">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img src="http://iiitg.ac.in/faculty/rakesh/pp.png" alt="Rakesh Matam" style="width:260px;height: 240px;"></p>
+    <h3 class="name">Dr. Rakesh Matam</h3>
+  </div>
+  <div class="flip-card-back">
+      <h1>Dr. Rakesh Matam</h1> 
+      <p class="title">CHIEF WARDEN</p>
+      <h4>Mob: 9570467688</h4>
+      <h4>Email: matamrakesh@gmail.com</h4>
+  
+</div>
+</div>
 </div>
 </div>
 <div class="col-sm-3">
-<div class="card">
-  <img src="#" alt="Sumit Mishra" style="width:100%;">
-  <h2 class="name">Dr. Sumit Mishra</h2>
-  <p class="title">Associate Warden</p>
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img src="#" alt="Sumit Mishra" style="width:260px; height: 240px;"></p>
+    <h3 class="name">Dr. Sumit Mishra</h3>
+    </div>
+    <div class="flip-card-back">
+      <h1>Dr. Sumit Mishra</h1> 
+      <p class="title">Associate WARDEN</p>
+      <h4>Mob: 7677414454</h4>
+      <h4>Email: sumit@iiitg.ac.in</h4>
+  
+    </div>
+  </div>
 </div>
+
 </div>
 <div class="col-sm-3">
-<div class="card">
-  <img src="#" alt="Moumita Roy" style="width:100%">
-  <h2 class="name">Dr. Moumita Roy</h2>
-  <p class="title">Associate Warden</p>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img img src="#" alt="Moumita Roy" style="width:260px; height: 240px;"></p>
+    <h3 class="name">Dr. Moumita Roy</h3>
+    </div>
+    <div class="flip-card-back">
+      <h1>Dr. Moumita Roy</h1> 
+      <p class="title">Associate WARDEN</p>
+      <h4>Mob: </h4>
+      <h4>Email: moumita@iiitg.ac.in</h4>
+  
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -117,90 +193,170 @@
 <br>
 <div class="col-sm-2"></div>
 <div class="col-sm-3">
-<div class="card">
-  <img src="" alt="Suranjana Barua" style="width:100%">
-  <h2 class="name">Dr. Suranjana Barua</h2>
-  <p class="title">ADSA</p>
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img src="" alt="Suranjana Barua"style="width:260px; height: 240px;"></p>
+    <h3 class="name">Dr. Suranjana Barua</h3>
+    </div>
+    <div class="flip-card-back">
+      <h1>Dr. Suranjana Barua</h1> 
+      <p class="title">ADSA</p>
+      <h4>Email: suranjana@iiitg.ac.in</h4>
+  
+    </div>
+  </div>
 </div>
 </div>
 <div class="col-sm-3">
-<div class="card">
-  <img src="#" alt="David Lal" style="width:100%;">
-  <h2 class="name">Dr. David Lal</h2>
-  <p class="title">Associate ADSA</p>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img src="#" alt="David Lal" style="width:260px; height: 240px;"></p>
+    <h3 class="name">Dr. David Lal</h3>
+    </div>
+    <div class="flip-card-back">
+      <h1>Dr. David Lal</h1> 
+      <p class="title">Associate ADSA</p>
+      <h4>Mob: </h4>
+      <h4>Email: david@iiitg.ac.in</h4>
+  
+    </div>
+  </div>
 </div>
 </div>
 <div class="col-sm-3">
-<div class="card">
-  <img src="#" alt="President" style="width:100%">
-  <h2 class="name">Anivrat Goel</h2>
-  <p class="title">President, Gymkhana</p>
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+     <p> <img src="#" alt="President" style="width:260px; height: 240px;"></p>
+    <h3 class="name">Anivrat Goel</h3>
+    </div>
+    <div class="flip-card-back">
+      <h1>Anivrat Goel</h1> 
+      <p class="title">President, Gymkhana</p>
+      <h4>Mob: </h4>
+      <h4>Email:</h4>
+  
+    </div>
+  </div>
 </div>
 </div>
 </div>
 </body>
+<br>
 <body>
   <h2><center>OTHER CONTACTS</center></h2>
   <br>
   <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;">
-      <h2 class="name">XYZ</h2>
+      <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">XYZ</h2>
       <p class="title">Caretaker, Boy's Hostel</p><br>
       <h4>Mob: </h4>
+    </div>
+    </div>
+    </div>
 
     </div>
-    </div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;">
-      <h2 class="name">XYZ</h2>
+      <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">XYZ</h2>
       <p class="title">Caretaker, Girls's Hostel</p><br>
       <h4>Mob: </h4>
     </div>
     </div>
+    </div>
+  </div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;">
-      <h2 class="name">XYZ</h2>
+      <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">XYZ</h2>
       <p class="title">Caretaker</p><br>
       <h4>Mob: </h4>
     </div>
-
     </div>
     </div>
-    <br>&ensp;
+    </div>
+  </div>
+    <br><br>
     <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;"><h2 class="name">XYZ</h2>
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">XYZ</h2>
       <p class="title">Security head</p><br>
       <h4>Mob: </h4>
     </div>
     </div>
+    </div>
+    </div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;">
-      <h2 class="name">Security</h2>
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">Security</h2>
       <p class="title">Boy's Hostel gate</p><br>
       <h4>Mob: </h4>
     </div>
     </div>
+    </div>
+    </div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;">
-      <h2 class="name">Security</h2>
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">Security</h2>
       <p class="title">Girl's Hostel gate</p><br>
       <h4>Mob: </h4>
     </div>
     </div>
     </div>
-    <br>&ensp;
+    </div>
+    </div>
+    <br><br>
     <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-3">
-    <div class="card" style="padding:3px;"><h2 class="name">XYZ</h2>
-      <p class="title">Doctor</p><br>
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">XYZ</h2>
+      <p class="title">Security head</p><br>
       <h4>Mob: </h4>
     </div>
     </div>
-
     </div>
+    </div>
+    <div class="col-sm-3">
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">Security</h2>
+      <p class="title">Boy's Hostel gate</p><br>
+      <h4>Mob: </h4>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-sm-3">
+    <div class="flip-card" style="height: 160px;">
+    <div class="flip-card-inner" style="transform: none;">
+    <div class="flip-card-front">
+    <h2 class="name">Security</h2>
+      <p class="title">Girl's Hostel gate</p><br>
+      <h4>Mob: </h4>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>    
 </html>
