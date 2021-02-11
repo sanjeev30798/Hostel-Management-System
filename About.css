@@ -1,5 +1,4 @@
-.fa:hover 
-{
+.fa:hover {
     opacity: 0.7;
 }
 
@@ -17,8 +16,13 @@
 {
   color:grey;
 }
+li
+{
+  color:black;
+}
 .f1{
-  background-color:grey;
+  background-color: #F0F3F4;
+  color:green;
   border-radius: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -26,13 +30,21 @@
   padding-bottom: 10px;
   color:white;
   margin:50px;
-  text-align: left;
+  text-align: justify;
+}
+.c1
+{
+  text-indent: center;
+  text-align: center;
+  color: green;
 }
 body
 {
-	background-color: #CCD1D1 ;
+  background-color: #CCD1D1 ;
+  font-size: 16px;
 }
 h1
 {
     text-align:center;
-  }
+    color:green;
+}
