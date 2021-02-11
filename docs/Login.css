@@ -1,0 +1,41 @@
+.fa:hover {
+    opacity: 0.7;
+}
+
+.b1
+{
+  background-color:black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:white;
+}
+.b1:hover
+{
+  color:grey;
+}
+body
+{
+	background-color: #CCD1D1;
+}
+.box{
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: white;
+    padding-left:15px;
+  }
+  .vl {
+  border-left: 3px solid green;
+  height: 320px;
+  position: absolute;
+  left: 60%;
+  margin-left: -3px;
+  top: 50px; 
+}
