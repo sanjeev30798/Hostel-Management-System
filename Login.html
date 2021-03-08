@@ -8,9 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Login.css">
 </head>
-<link rel="stylesheet" href="Login.css">
-<body style="background-color: #CCD1D1 ">
+<body>
 
 <div class="row">
   <div class="col-sm-1"></div>
@@ -30,21 +30,57 @@
   </div>
   <br>
   <!-- new section  -->
+
+  <br><br><br><br><br><br><br><br><br>
   <div class="row">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-8">
-  <div>
-  <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
-  <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
-  <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
-  <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
-  <a href="clubs.html"><button type="button" class="btn  b1">Clubs</button></a>
-  <a href="LifeAthostel.html"><button type="button" class="btn  b1">Life At Hostel</button></a>
-  <a href="Contact.html"><button type="button" class="btn  b1">Contact</button></a>
-  <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-7">
+  <div class="box">
+    <div class="row">
+      <div class="col-sm-3 col-lg-3 col-md-3 col-xs-3"></div>
+      <div class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+    <h1><center><strong>Login</strong></h1></center>
+    </h2>
   </div>
 </div>
+    <br>
+    <div class="row">
+
+      <div class="col-sm-7">
+      <form action="http://127.0.0.1:8000/credentials" method="POST">
+      <div class="form-group">
+          <div class="row">
+           <div class="col-sm-3"></div>
+           <div class="col-sm-6"> 
+            <label class="radio-inline">
+            <input type="radio" name="type" value="" checked><strong>Student</strong>
+            </label>
+            &ensp; &ensp;
+            <label class="radio-inline">
+            <input type="radio" name="type" value=""><strong>Admin</strong>
+            </label>
+          </div>
+          </div>
+    <br>
+      <label for="email">Email:</label>
+      <input type="email"  name="email" id="email" placeholder="Enter email" size="50">
+      </div>
+      <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password"  name="pwd" id="pwd" placeholder="Enter password" size="50">
+      </div>
+      <input type="Submit" class="btn btn-default"  value="Submit" style="background-color: #E39009 ">
+      </form>
+      </div> 
+      <div class="col-sm-1 vl">
+       
+      </div>
+
+  </div>
+
 </div>
+</div>
+
 </body>
 
 </html>
