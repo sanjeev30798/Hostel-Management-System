@@ -10,19 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="superuser.css">
 </head>
-<script>
-function handleform() {
-  var r = confirm("Confirm to complain about mess");
-  if (r == true) {
-    alert("Complain sent");
-    return true;
-    } 
-    
-  else {
-      return false;
-  }
-}
-</script>
 
 <body>
 
@@ -59,28 +46,37 @@ function handleform() {
 </div>
 </div>
 </body>
-
+<script>
+function handleform() {
+  var r = confirm("Confirm to request for room cleaning");
+  if (r == true) {
+    alert("Request sent");
+    return true;
+    } 
+  else {
+      alert('Request cancelled');
+      return false;
+  }
+}
+</script>
 <br>
 <body>
-  <h1 style="text-align: center;">Mess Complain</h1>
+  <h1 style="text-align: center;">Cleaning Request</h1>
   &ensp;
-  <div class="row">
   <div class="col-sm-3 col-xs-1"></div>
   <div class="col-sm-6 col-xs-6">
-   <form onsubmit="return handleform(this);" action="http://127.0.0.1:8004/complain" method="POST">
-    <br>
+   <form onsubmit="return handleform(this);" action="http://127.0.0.1:8003/cleaning" method="POST">
+    <h3><br>
     <div class="form-group" id="s1">
-      <h3>
-      <label for="complain">Enter your complain</label></h3>
-      <input type="text" class="form-control" id="complain" placeholder="Write your complain" name="complain">
+      <label for="room_no">Enter your room no.</label>
+      <input type="number" class="form-control" id="room_no" placeholder="Enter your room no." name="room_no" min="1">
     </div>
 
 
     <button class="btn btn-primary" type="submit" >Submit</button>
 
   </form>
-</div>
-</div>
+  </div>
 </body>
+
 </html>
- 
