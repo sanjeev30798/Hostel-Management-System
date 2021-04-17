@@ -8,45 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="superuser.css">
- <script>
-  $(document).ready(function(){
-    $("#b1").hide();
-    $("form").trigger("reset");
-    $("#stud").click(function(){
-      
-      $("#b1").hide();
-      $("#s1").show();
-      
-
-    })
-  $("#batch").click(function(){
-     $("#b1").show();
-    $("#s1").hide();
-    
-   
-  });
-  $("#btn2").click(function () {
-        $("form").trigger("reset");
-    });
-});
-function handleform() {
-  var r = confirm("Confirm to send the request for refund");
-  if (r == true) {
-    alert("refund request sent");
-    return true;
-    } 
-    
-  else {
-      return false;
-  }
-}
-</script>
-
 </head>
+<link rel="stylesheet" href="superuser_complain.css">
 
 <body>
-
 <div class="row">
   <div class="col-sm-1"></div>
   <div class="col-sm-6"><p></p><img src="logo.svg" alt="logo" ></div>
@@ -59,14 +24,17 @@ function handleform() {
     <a href="https://www.instagram.com/iiit.guwahati/?igshid=lcpellwbzapn"><i class="fa fa-instagram" style="font-size:24px;color: #125688"></i></a>&ensp;&nbsp;
   </div>
   <br>
+  <div class="col-sm-1 pull-right">
+    <a href="Login.html"><button type="button" class="btn  b1">Login</button></a>
+  </div>
+  </div>
   </div>
   <br>
   <!-- new section  -->
   <div class="row">
-    <div class="col-sm-3 col-xs-0"></div>
-    <div class="col-sm-8 col-xs-12">
-
-<div>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-8">
+  <div>
     <div class="btn-group btn-group-justified">
     <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
     <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
@@ -81,44 +49,5 @@ function handleform() {
 </div>
 </div>
 </body>
-
-<br>
-<body>
-  <h1 style="text-align: center;">Apply for refunds</h1> 
-  &ensp;
-  <div class="col-sm-3 col-xs-1"></div>
-  <div class="col-sm-5 col-xs-5">
-   <form onsubmit="return handleform(this);" method="POST" action="http://127.0.0.1:8006/refund">
-    <h3> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-    <label class="radio-inline"  for ="type" id="stud">
-      <input type="radio" id="type" name="type1" checked>Mess bill
-    </label>
-    
-    <label class="radio-inline" for="type" id="batch">
-      <input type="radio"  for="type" name="type1">Hospital bill
-    </label>
-    </h3>
-    <label for="bill">Roll no:</label>
-      <input type="number" class="form-control" id="bill" placeholder="Enter student roll number" name="roll_no" required>
-    <div class="form-group" id="s1">
-      
-      <br>
-      <label for="num">Number of days:</label>
-      <input type="number" class="form-control" id="num" placeholder="Enter the number of days" name="days" min="5">
-      
-    </div>
-    <div class="form-group" id="b1">
-       
-      <br>
-      <label for="num">Amount:</label>
-      <input type="number" class="form-control" id="num" placeholder="Enter the amount in rupees" name="amount">
-      
-    </div>
-    
-    <button class="btn btn-primary btn2" type="submit" >Submit</button>
-
-  </form>
-  </div>
-</body>
-
+</head>
 </html>

@@ -4,9 +4,15 @@ var app = express();
 var bodyParser = require('body-parser');  
 var urlencodedParser = bodyParser.urlencoded({ extended: false })  
 app.use(express.static('public'));  
-app.get('/index.html', function (req, res) {  
-   res.sendFile( __dirname + "/" + "index.html" );  
+app.get('/superuser.html', function (req, res) {  
+   res.sendFile( __dirname + "/" + "superuser.html" );  
 })  
+app.get('/functional.html', function (req, res) {  
+   res.sendFile(__dirname + "/" + "functional.html");
+})
+app.get('/', function (req, res) {  
+   res.sendFile( __dirname + "/" + "Login.html" );  
+})
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
@@ -30,7 +36,10 @@ app.post('/credentials', urlencodedParser, function (req, res) {
 	    db.close();
 	  });
 	});
-   res.end();  
+	if(req.body.type=="admin")
+   res.redirect('/superuser.html');
+   else
+   res.redirect('/functional.html');  
 
 })
 

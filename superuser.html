@@ -10,11 +10,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <link rel="stylesheet" href="superuser.css">
+<style>
+  
+  .b1
+{
+  background-color:black;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color:white;
+}
+.div1 {
+  width: 330px;
+  height:430px;
+  border: 1px solid darkred;
+  box-sizing: border-box;
+}
+
+.div2 {
+  width: 300px;
+  height: 330px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+body
+{
+  background-color: #CCD1D1 ;
+  font-size: 16px;
+}
+</style>
 <body>
 
 <div class="row">
   <div class="col-sm-1"></div>
-  <div class="col-sm-6"><p></p><img src="logo.svg" alt="logo" ></div>
+  <div class="col-sm-6"><p></p><img src="http://iiitg.ac.in/header.svg" alt="logo" ></div>
   <div class="col-sm-2">
     <p> <!--   --></p>
     <a href="https://www.facebook.com/iiitghy"><i class="fa fa-facebook-square" style="font-size:24px;color:#3b5998;"></i></a>&ensp;&nbsp;
@@ -31,17 +62,17 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-8">
   <div>
-
-  <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
-  <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
-  <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
-  <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
-  <a href="clubs.html"><button type="button" class="btn  b1">Clubs</button></a>
-  <a href="LifeAthostel.html"><button type="button" class="btn  b1">Life At Hostel</button></a>
-  <a href="Contact.html"><button type="button" class="btn  b1">Contact</button></a>
-  <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
-
+    <div class="btn-group btn-group-justified">
+    <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
+    <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
+    <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
+    <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
+    <a href="clubs.html"><button type="button" class="btn  b1">Clubs</button></a>
+    <a href="LifeAthostel.html"><button type="button" class="btn  b1">Life At Hostel</button></a>
+    <a href="Contact.html"><button type="button" class="btn  b1">Contact</button></a>
+    <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
   </div>
+</div>
 </div>
 </div>
 </body>
@@ -51,16 +82,18 @@
 	<br><br>
 	<div class="col-sm-5 col-xs-0"></div>
 	<div class="col-sm-5 col-xs-3 div1">
-		<h2 style="text-align: center">Students</h2>
+		<h2 style="text-align: center">Admin</h2>
 		<ul class="nav nav-pills nav-stacked" role="tablist">
     <li ><a href="register_students.html">Register</a></li>
-    <li ><a href="">Requests</a></li>
+    <li><a href="Postnews.html">Post News</a></li>
+    <li ><a href="#">Requests</a></li>
     <li><a href="#">Refunds</a></li>
-    <li><a href="#">Complain</a></li>
+    <li><a href="superuser_complain.html">Complain</a></li>
     <li><a href="mess_bill.html">Mess bill</a></li>
-    <li><a href="student_password.html">Change passwords</a></li>        
+    <li><a href="student_password.html">Change passwords</a></li>
+    <li><a href="messbill_calculation.html">Mess bill calculation</a></li>
   </ul>
 	</div>
-	
+
 
 </html>

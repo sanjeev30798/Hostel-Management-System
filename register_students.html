@@ -31,35 +31,56 @@
     <div class="col-sm-3 col-xs-0"></div>
     <div class="col-sm-8 col-xs-12">
   
-
-  <a href="Home.html"><button type="button" class="btn  b1">Home</button></a>
-  <a href="About.html"><button type="button" class="btn  b1">About</button></a>
-  <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
-  <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
-  <a href="clubs.html"><button type="button" class="btn b1">Clubs</button></a>
-  <a href="LifeAthostel.html"><button type="button" class="btn b1">Life At Hostel</button></a>
-  <a href="Contact.html"><button type="button" class="btn b1">Contact</button></a>
-  <a href="Reachus.html"><button type="button" class="btn b1">Reach us</button></a>
-
+<div>
+    <div class="btn-group btn-group-justified">
+    <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
+    <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
+    <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
+    <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
+    <a href="clubs.html"><button type="button" class="btn  b1">Clubs</button></a>
+    <a href="LifeAthostel.html"><button type="button" class="btn  b1">Life At Hostel</button></a>
+    <a href="Contact.html"><button type="button" class="btn  b1">Contact</button></a>
+    <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
+  </div>
+</div>
   
 </div>
 <div class="col-sm-1 col-xs-0"></div>
 </div>
 </body>
 <br>
+<script>
+function handleform() {
+  //document.getElementById("cnf").innerHTML = "Hello World";
+  var txt;
+  var r = confirm("Confirm?");
+  if (r == true) {
+    alert("Registered");
+   // open("http://127.0.0.1:8001/register");
+    return true;
+    } 
+  else {
+      alert('Cancelled');
+      return false;
+  }
+
+
+}
+</script>
+
 <body>
 
   <h2 style="text-align: center">Register new students</h2>
 <div class="col-sm-3 col-xs-2"></div>
 <div class="col-sm-5 col-xs-5">
-  <form action="http://127.0.0.1:8001/register" method="POST">
+  <form onsubmit="return handleform(this);" action="http://127.0.0.1:8001/register" method="POST">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required pattern=".+@iiitg.ac.in">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required minlength="5"> 
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

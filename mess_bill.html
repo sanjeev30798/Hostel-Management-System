@@ -9,20 +9,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="superuser.css">
- <script>
-  $(document).ready(function(){
-    $("#b1").hide();
-    $("#stud").click(function(){
-      $("#b1").hide();
-      $("#s1").show();
-
-    })
-  $("#batch").click(function(){
-    $("#s1").hide();
-    $("#b1").show();
-  });
-});
-</script> 
 </head>
 
 <body>
@@ -46,45 +32,32 @@
     <div class="col-sm-3 col-xs-0"></div>
     <div class="col-sm-8 col-xs-12">
   
-
-  <a href="Home.html"><button type="button" class="btn  b1">Home</button></a>
-  <a href="About.html"><button type="button" class="btn  b1">About</button></a>
-  <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
-  <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
-  <a href="clubs.html"><button type="button" class="btn b1">Clubs</button></a>
-  <a href="LifeAthostel.html"><button type="button" class="btn b1">Life At Hostel</button></a>
-  <a href="Contact.html"><button type="button" class="btn b1">Contact</button></a>
-  <a href="Reachus.html"><button type="button" class="btn b1">Reach us</button></a>
-
-  
+<div>
+    <div class="btn-group btn-group-justified">
+    <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
+    <a href="About.html"><button type="button" class="btn  b1" >About</button></a>
+    <a href="Gallery.html"><button type="button" class="btn  b1">Gallery</button></a>
+    <a href="HostelRules.html"><button type="button" class="btn b1">Hostel Rules</button></a>
+    <a href="clubs.html"><button type="button" class="btn  b1">Clubs</button></a>
+    <a href="LifeAthostel.html"><button type="button" class="btn  b1">Life At Hostel</button></a>
+    <a href="Contact.html"><button type="button" class="btn  b1">Contact</button></a>
+    <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
+  </div>
+</div>
 </div>
 </div>
 </body>
 
 <br>
 <body>
-  <h1 style="text-align: center;">View Mess bills</h1> 
+  <h1 style="text-align: center;">View mess bill</h1> 
   &ensp;
-  <div class="col-sm-4 col-xs-1"></div>
-  <div class="col-sm-5 col-xs-5">
-   <form>
-    <h3> &ensp;&ensp;&ensp;&ensp;&ensp;
-    <label class="radio-inline" id="stud">
-      <input type="radio" name="optradio" checked>Student
-    </label>
-  
-    <label class="radio-inline" id="batch">
-      <input type="radio" name="optradio">Batch
-    </label>
-    </h3>
-
+  <div class="col-sm-3 col-xs-1"></div>
+  <div class="col-sm-6 col-xs-5">
+   <form action="http://127.0.0.1:8007/mess_bill" method="POST">
     <div class="form-group" id="s1">
       <label for="bill">Roll no:</label>
-      <input type="number" class="form-control" id="bill" placeholder="Enter student roll number" name="roll_no">
-    </div>
-    <div class="form-group" id="b1">
-      <label for="bill">Batch :</label>
-      <input type="text" class="form-control" id="bill" placeholder="Enter the batch name" name="batch">
+      <input type="number" class="form-control" id="bill" placeholder="Enter student roll number" name="mess_bill" min="1">
     </div>
     
     <button class="btn btn-primary" type="submit" >Submit</button>

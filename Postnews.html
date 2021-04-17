@@ -9,40 +9,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="superuser.css">
- <script>
-  $(document).ready(function(){
-    $("#b1").hide();
-    $("form").trigger("reset");
-    $("#stud").click(function(){
-      
-      $("#b1").hide();
-      $("#s1").show();
-      
-
-    })
-  $("#batch").click(function(){
-     $("#b1").show();
-    $("#s1").hide();
-    
-   
-  });
-  $("#btn2").click(function () {
-        $("form").trigger("reset");
-    });
-});
-function handleform() {
-  var r = confirm("Confirm to send the request for refund");
-  if (r == true) {
-    alert("refund request sent");
-    return true;
-    } 
-    
-  else {
-      return false;
-  }
-}
-</script>
-
 </head>
 
 <body>
@@ -65,7 +31,6 @@ function handleform() {
   <div class="row">
     <div class="col-sm-3 col-xs-0"></div>
     <div class="col-sm-8 col-xs-12">
-
 <div>
     <div class="btn-group btn-group-justified">
     <a href="Home.html"><button type="button" class="btn  b1" >Home</button></a>
@@ -78,47 +43,31 @@ function handleform() {
     <a href="Reachus.html"><button type="button" class="btn  b1">Reach us</button></a>
   </div>
 </div>
+
 </div>
 </div>
 </body>
 
 <br>
 <body>
-  <h1 style="text-align: center;">Apply for refunds</h1> 
+  <h1 style="text-align: center;">Post News</h1>
   &ensp;
+  <div class="row">
   <div class="col-sm-3 col-xs-1"></div>
-  <div class="col-sm-5 col-xs-5">
-   <form onsubmit="return handleform(this);" method="POST" action="http://127.0.0.1:8006/refund">
-    <h3> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
-    <label class="radio-inline"  for ="type" id="stud">
-      <input type="radio" id="type" name="type1" checked>Mess bill
-    </label>
-    
-    <label class="radio-inline" for="type" id="batch">
-      <input type="radio"  for="type" name="type1">Hospital bill
-    </label>
-    </h3>
-    <label for="bill">Roll no:</label>
-      <input type="number" class="form-control" id="bill" placeholder="Enter student roll number" name="roll_no" required>
+  <div class="col-sm-6 col-xs-6">
+   <form action="http://127.0.0.1:8004/news" method="POST">
+    <br>
     <div class="form-group" id="s1">
-      
-      <br>
-      <label for="num">Number of days:</label>
-      <input type="number" class="form-control" id="num" placeholder="Enter the number of days" name="days" min="5">
-      
+      <h3>
+      <label for="complain">News Updates</label></h3>
+      <input type="text" class="form-control" id="complain" placeholder="Write the updated news" name="news">
     </div>
-    <div class="form-group" id="b1">
-       
-      <br>
-      <label for="num">Amount:</label>
-      <input type="number" class="form-control" id="num" placeholder="Enter the amount in rupees" name="amount">
-      
-    </div>
-    
-    <button class="btn btn-primary btn2" type="submit" >Submit</button>
+
+
+    <button class="btn btn-primary" type="submit" >Submit</button>
 
   </form>
-  </div>
+</div>
+</div>
 </body>
-
 </html>
